@@ -7,6 +7,12 @@ var express=require("express"),
 
 mongoose.connect("mongodb://Yash123:yash1234@ds039768.mlab.com:39768/tbhack");
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
 var apiroutes=require("./routes/apiRoutes");
 app.use("/api/user",apiroutes);
 app.get("/",function(req,res){
