@@ -17,7 +17,8 @@ var userDataSchema=new mongoose.Schema({
     pc:String,
     dob:{
         type:Date
-    }
+    },
+    stage:Number
 	
 })	
 module.exports=mongoose.model("user",userDataSchema);
