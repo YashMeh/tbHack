@@ -14,9 +14,11 @@ app.use(function(req, res, next) {
     next();
   });
 var apiroutes=require("./routes/apiRoutes"),
-    apiroutesDoc=require("./routes/apiRoutesDoc");
+    apiroutesDoc=require("./routes/apiRoutesDoc"),
+    patientroutes=require("./routes/patientList")
 app.use("/api/user",apiroutes);
 app.use("/api/doc",apiroutesDoc);
+app.use("/api/patient",patientroutes);
 app.get("/",function(req,res){
     res.send("The api routes are at /api/user  and /api/doc");
 })
