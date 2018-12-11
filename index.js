@@ -18,7 +18,7 @@ var apiroutes=require("./routes/apiRoutes"),
 app.use("/api/user",apiroutes);
 app.use("/api/doc",apiroutesDoc);
 app.get("/",function(req,res){
-    res.send("The api route is at /api/user");
+    res.send("The api routes are at /api/user  and /api/doc");
 })
 app.listen(port,function(err){
     if(err)
