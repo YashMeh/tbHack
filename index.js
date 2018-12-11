@@ -13,8 +13,10 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
   });
-var apiroutes=require("./routes/apiRoutes");
+var apiroutes=require("./routes/apiRoutes"),
+    apiroutesDoc=require("./routes/apiRoutesDoc");
 app.use("/api/user",apiroutes);
+app.use("/api/doc",apiroutesDoc);
 app.get("/",function(req,res){
     res.send("The api route is at /api/user");
 })
