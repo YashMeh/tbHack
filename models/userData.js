@@ -1,24 +1,50 @@
 var mongoose=require("mongoose")
 	
 var userDataSchema=new mongoose.Schema({
-    uid:String,
+    aadhar:String,
     name:String,
+    age:String,
     gender:String,
-    yob:String,
-    co:String,
-    house:String,
-    street:String,
-    loc:String,
-    vtc:String,
-    po:String,
-    dist:String,
-    subdist:String,
-    state:String,
-    pc:String,
-    dob:{
-        type:Date
+    address:String,
+    pincode:String,
+    Cough:{
+        type:Boolean,
+        default: false
     },
-    stage:Number
+    ChestPain:{
+        type:Boolean,
+        default: false
+    },
+    CoughingBlood:{
+        type:Boolean,
+        default: false
+    },
+    Fatigue:{
+        type:Boolean,
+        default: false
+    },
+    WeightLoss:{
+        type:Boolean,
+        default: false
+    },
+    NoAppetite:{
+        type:Boolean,
+        default: false
+    },
+    Chills:{
+        type:Boolean,
+        default: false
+    },
+    Fever:{
+        type:Boolean,
+        default: false
+    },
+    NightSweating:{
+        type:Boolean,
+        default: false
+    },
+    stage:Number,
+
 	
 })	
 module.exports=mongoose.model("user",userDataSchema);
