@@ -3,7 +3,7 @@ var mongoose=require("mongoose")
 var userDataSchema=new mongoose.Schema({
     aadhar:String,
     name:String,
-    age:String,
+    age:Number,
     gender:String,
     address:String,
     pincode:String,
