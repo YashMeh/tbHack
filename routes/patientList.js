@@ -90,6 +90,7 @@ router.get("/:id",function(req,res){
     routerFunction(ID).then(function(e){
         console.log(e);
         res.json(e);
+        gs=[];
     })
 })
 module.exports=router    
