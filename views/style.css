@@ -4,6 +4,28 @@ body, html {
     font-family: 'Helvetica Neue', 'Calibri', Arial, sans-serif;
     height: 100%;
 }
+#scanned    {
+    display: none;
+}
+#success    {
+    display: none;
+    text-align: center;
+    background-color: lightgrey;
+    border: 2px solid lightskyblue;
+    border-radius: 12px;
+    width: 60%;
+    margin: auto;
+}
+#loading    {
+    display: none;
+    text-align: center;
+    background-color: lightgrey;
+    border: 2px solid lightskyblue;
+    border-radius: 12px;
+    width: 60%;
+    margin: auto;
+
+}
 .container  {
     text-align: center;
     background-color: lightgrey;
@@ -13,7 +35,10 @@ body, html {
     margin-left: auto;
     margin-right: auto;
 }
+.preview-container  {
+    text-align: center;
 
+}
 #preview    {
     margin: 10px;
     border: 3px solid black;
