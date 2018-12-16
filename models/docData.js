@@ -14,7 +14,7 @@ var docDataSchema=new mongoose.Schema({
     dist:String,
     subdist:String,
     state:String,
-    pc:String,
+    pincode:String,
     dob:{
         type:Date
     }
