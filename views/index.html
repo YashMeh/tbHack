@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Report</title>
+    <title>QR Code</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
@@ -12,6 +12,8 @@
 <div class="container" align="center">
 <div class="preview-container">
     <video id="preview"></video>
+    <h1 id="unscanned">Please scan Aadhar Card.</h1>
+    <h1 id="scanned">Aadhar Card scanned!</h1>
 </div>
 <h2 id="content"></h2>
 <table align="center">
@@ -24,8 +26,8 @@
         <td><input type="text" id="name" id="name"></td>
     </tr>
     <tr>
-        <td>Age:</td>
-        <td><input type="text" id="age"></td>
+        <td>Date Of Birth:</td>
+        <td><input type="text" id="dob"></td>
     </tr>
     <tr>
         <td>Gender:</td>
@@ -34,6 +36,14 @@
     <tr>
         <td>Address:</td>
         <td><textarea id="address"></textarea></td>
+    </tr>
+    <tr>
+        <td>City:</td>
+        <td><input type="text" id="city"></td>
+    </tr>
+    <tr>
+        <td>State:</td>
+        <td><input type="text" id="state"></td>
     </tr>
     <tr>
         <td>Pincode:</td>
@@ -57,6 +67,13 @@
     <input type="button" value="Report" id="submit">
 </form>
 </div>
+</div>
+<div id="loading">
+    <h1>Submitting your data!</h1>
+    <img src="media/loading.gif" width="40%">
+</div>
+<div id="success">
+    <h1>Thank you for reporting!</h1>
 </div>
 <script src="qrscan.js" type="text/javascript"></script>
 </body>
