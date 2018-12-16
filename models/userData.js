@@ -3,10 +3,12 @@ var mongoose=require("mongoose")
 var userDataSchema=new mongoose.Schema({
     aadhar:String,
     name:String,
-    age:Number,
+    dob:Date,
+    city:String,
     gender:String,
     address:String,
     pincode:String,
+    state:String,
     Cough:{
         type:Boolean,
         default: false
@@ -42,8 +44,8 @@ var userDataSchema=new mongoose.Schema({
     NightSweating:{
         type:Boolean,
         default: false
-    },
-    stage:Number,
+    }
+    
 
 	
 })	
