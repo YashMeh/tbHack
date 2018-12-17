@@ -1,7 +1,8 @@
 var express=require("express"),
 	router=express.Router(),
 	mongoose=require("mongoose"),
-	user=require("../models/userData.js")
+	user=require("../models/userData.js"),
+	log=require("../models/logData.js")
 
 mongoose.connect("mongodb://Yash123:yash1234@ds039768.mlab.com:39768/tbhack");
 //mongoose.connect("mongodb://localhost/emailer");	
@@ -20,7 +21,8 @@ router.post("/",function(req,res){
 	user.create(req.body)
 	.then(function(newPost){
 		res.status(201).json(newPost);                                  //one can set the status
-
+		var lob={"aadhar":req.body.aadhar,"state":req.body.state,"symptoms":req.body.symptoms,"medicine":req.body.medicine,"date":req.body.date};
+		log.create(lob).then(console.log("Logged")).catch(function(erri){console.log(erri)});
 	})
 	.catch(function(err){
 		res.send(err);
