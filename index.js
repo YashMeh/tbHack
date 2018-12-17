@@ -16,12 +16,15 @@ app.use(function(req, res, next) {
 var apiroutes=require("./routes/apiRoutes"),
     apiroutesDoc=require("./routes/apiRoutesDoc"),
     patientroutes=require("./routes/patientList"),
-    homeroutes=require("./routes/pageRoutes")
+    homeroutes=require("./routes/pageRoutes"),
+    logroutes=require("./routes/logRoutes")
 app.use(express.static(__dirname+'/views'));
 app.use("/api/user",apiroutes);
 app.use("/api/doc",apiroutesDoc);
 app.use("/api/patient",patientroutes);
 app.use("/report",homeroutes);
+app.use("/log",logroutes);
+
 app.get("/",function(req,res){
     res.send("The api routes are at /api/user  and /api/doc");
 })
