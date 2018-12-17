@@ -44,7 +44,8 @@ var userDataSchema=new mongoose.Schema({
     NightSweating:{
         type:Boolean,
         default: false
-    }
+    },
+    med:Array
     
 
 	
