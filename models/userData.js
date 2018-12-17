@@ -45,7 +45,12 @@ var userDataSchema=new mongoose.Schema({
         type:Boolean,
         default: false
     },
-    med:Array
+    med:[
+        {
+            drugname:String,
+            number:Number
+        }
+    ]
     
 
 	
