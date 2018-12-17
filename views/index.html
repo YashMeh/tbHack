@@ -4,7 +4,6 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
     <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
@@ -64,6 +63,17 @@
         <input type="checkbox" name="symptoms" value="Fever">Fever<br>
         <input type="checkbox" name="symptoms" value="NightSweating">Sweating at night<br>
     </div>
+    <div id="medDiv">
+        <br><b>Medicines:</b>
+        <select id="medicine">
+            <option value="choose">-Choose medicine combination-</option>
+            <option value="1110">Isoniazid/Rifampin/Ethambutol</option>
+            <option value="0111">Rifampin/Ethambutol/Pyrazinamide</option>
+            <option value="1011">Isoniazid/Ethambutol/Pyrazinamide</option>
+            <option value="1101">Isoniazid/Rifampin/Pyrazinamide</option>
+        </select>
+    </div>
+    <br>
     <input type="button" value="Report" id="submit">
 </form>
 </div>

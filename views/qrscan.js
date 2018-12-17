@@ -1,7 +1,6 @@
 let scanner = new Instascan.Scanner({ video: document.getElementById('preview'),backgroundScan: false});
 let x;
 let data = {};
-
 scanner.addListener('scan', function (content) {
     parser = new DOMParser();
     xmlDoc = parser.parseFromString(content,"text/xml");
@@ -38,6 +37,7 @@ scanner.addListener('scan', function (content) {
     scanner.stop().then(() =>   {
         $("#unscanned").hide();
         $("#scanned").show();
+        $("#preview").hide();
     });
 });
 Instascan.Camera.getCameras().then(function (cameras) {
@@ -69,9 +69,24 @@ function sendData() {
     patient["pincode"] = document.getElementById('pincode').value;
 
     let symptoms = document.getElementsByName("symptoms");
+    patient["symptoms"] = [];
     for(let i=0;i<symptoms.length;i++)    {
-        patient[symptoms[i].value] = symptoms[i].checked;
+        patient["symptoms"][i] = (symptoms[i].checked)?1:0;
     }
+
+    let meds = document.getElementById("medicine").options;
+    let medicine;
+    for(let i=1; i<meds.length;i++) {
+        if (meds[i].selected === true)
+            medicine = meds[i].value;
+    }
+    medicine = medicine.split("");
+    for(let i=0;i<medicine.length;i++)  {
+        medicine[i] = parseInt(medicine[i]);
+    }
+    patient["medicine"] = medicine;
+    patient["state"] = false;
+    patient["date"] = Date.now();
     console.log(patient);
     const url = "https://tbhack2.herokuapp.com/api/user";
     $.post(url,patient,function(data, status)   {
