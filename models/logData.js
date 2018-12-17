@@ -6,9 +6,6 @@ var logDataSchema=new mongoose.Schema({
     symptoms:Array,
     medicine:Array,
     state:Boolean,
-    date:{
-        type:Date,
-        default:Date.now()
-    }
+    date:Number
 })	
 module.exports=mongoose.model("log",logDataSchema);
