@@ -205,7 +205,9 @@ for(var i=0;i<100;i++)
     var stateIndex=getRandomArbitrary(0,states.length-1);
     var arbMedicine=arbMed();
     var arbSymptoms=arbSymp();
-    var user={"aadhar":aadhar[aadharIndex],"name":names[nameIndex],"dob":dob[dobIndex],"city":cities[cityIndex],"gender":gender[genderIndex],"address":"Allahabad","pincode":pincodes[pincodeIndex],"state":states[stateIndex],"symptoms":arbSymptoms,"medicine":arbMedicine,"date":Date.now()}
+    var tbstatus=getRandomArbitrary(0,3);
+    var symptomCount=getRandomArbitrary(0,10);
+    var user={"aadhar":aadhar[aadharIndex],"name":names[nameIndex],"dob":dob[dobIndex],"city":cities[cityIndex],"gender":gender[genderIndex],"address":"Allahabad","pincode":pincodes[pincodeIndex],"state":states[stateIndex],"symptoms":arbSymptoms,"medicine":arbMedicine,"date":Date.now(),"tbstatus":tbstatus,"symptomCount":symptomCount}
     aadharIndex=aadharIndex+1;
     $.ajax({
         method:"POST",

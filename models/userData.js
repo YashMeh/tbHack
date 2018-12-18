@@ -12,7 +12,8 @@ var userDataSchema=new mongoose.Schema({
     state:String,
     symptoms:Array,
     medicine:Array,
-    sputum:Boolean,
+    tbstatus:Number,
+    symptomCount:Number,
     date:Number
     
 

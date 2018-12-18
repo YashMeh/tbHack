@@ -5,7 +5,7 @@ var express=require("express"),
     app=express()
 //mongoose.connect("mongodb://localhost/emailer");	
 
-mongoose.connect("mongodb://Yash123:yash1234@ds039768.mlab.com:39768/tbhack");
+mongoose.connect("mongodb://yash123:yash123@ds163699.mlab.com:63699/tbhack");
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(function(req, res, next) {
