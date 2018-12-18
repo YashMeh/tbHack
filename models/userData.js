@@ -12,7 +12,7 @@ var userDataSchema=new mongoose.Schema({
     state:String,
     symptoms:Array,
     medicine:Array,
-    state:Boolean,
+    sputum:Boolean,
     date:Number
     
 
