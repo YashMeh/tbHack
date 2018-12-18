@@ -5,9 +5,10 @@ var logDataSchema=new mongoose.Schema({
     aadhar:String,
     symptoms:Array,
     medicine:Array,
-    sputum:Boolean,
     state:String,
     city:String,
-    date:Number
+    date:Number,
+    tbstatus:Number,
+    symptomCount:Number
 })	
 module.exports=mongoose.model("log",logDataSchema);

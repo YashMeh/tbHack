@@ -21,7 +21,7 @@ router.post("/",function(req,res){
 	user.create(req.body)
 	.then(function(newPost){
 		res.status(201).json(newPost);                                  //one can set the status
-		var lob={"aadhar":req.body.aadhar,"sputum":req.body.sputum,"symptoms":req.body.symptoms,"medicine":req.body.medicine,"date":req.body.date,"state":req.body.state,"city":req.body.city};
+		var lob={"aadhar":req.body.aadhar,"symptoms":req.body.symptoms,"medicine":req.body.medicine,"date":req.body.date,"state":req.body.state,"city":req.body.city,tbstatus:true,symptomCount:req.body.symptomCount};
 		log.create(lob).then(console.log("Logged")).catch(function(erri){console.log(erri)});
 	})
 	.catch(function(err){
