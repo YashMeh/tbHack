@@ -227,7 +227,7 @@ for(var i=0;i<100;i++)
     var finalCount  =getRandomArbitrary(10,50);
     var cityIndex=getRandomArbitrary(0,cities.length-1);
     var stateIndex=getRandomArbitrary(0,states.length-1);
-    var data={"presentCount":initialCount,"finalCount":finalCount,"city":cities[cityIndex],"state":states[stateIndex]}
+    var data={"initialCount":initialCount,"presentCount":finalCount,"city":cities[cityIndex],"state":states[stateIndex]}
     $.ajax({
                 method:"POST",
                 url:"https://tbhack2.herokuapp.com/shop",
