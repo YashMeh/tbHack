@@ -1,11 +1,15 @@
-body, html {
+/* body, html {
     padding: 0;
     margin: 0;
     font-family: 'Helvetica Neue', 'Calibri', Arial, sans-serif;
     height: 100%;
-}
+} */
 #scanned    {
     display: none;
+}
+
+#unscanned{
+    font-size: 2em;
 }
 #success    {
     display: none;
@@ -13,7 +17,7 @@ body, html {
     background-color: lightgrey;
     border: 2px solid lightskyblue;
     border-radius: 12px;
-    width: 60%;
+    /*width: 60%;*/
     margin: auto;
 }
 #loading    {
@@ -22,18 +26,30 @@ body, html {
     background-color: lightgrey;
     border: 2px solid lightskyblue;
     border-radius: 12px;
-    width: 60%;
+    /*width: 60%;*/
     margin: auto;
 
 }
+
+body{
+    font-family: 'EB Garamond', serif;
+    background: #5f2c82;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
 .container  {
     text-align: center;
-    background-color: lightgrey;
+    background-color: white;
     border: 2px solid lightskyblue;
     border-radius: 12px;
-    width:60%;
+    /* width:60%; */
     margin-left: auto;
     margin-right: auto;
+    align-items: center;
+    justify-content: center;
 }
 .preview-container  {
     text-align: center;
@@ -41,8 +57,9 @@ body, html {
 }
 #preview    {
     margin: 10px;
-    border: 3px solid black;
-    width:95%;
+    /* border: 2px solid lightskyblue; */
+    width:90%;
+    height: 40%;
 }
 table   {
     width: 100%;
@@ -69,4 +86,13 @@ table td + td > input,textarea{  /* this will go to the 2nd column of a table di
 
 #symptoms   {
     text-align:left;
+}
+
+.next{
+    font-family: 'EB Garamond', serif;
+    background: #5f2c82;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 30%;
+    text-align:center;
 }
