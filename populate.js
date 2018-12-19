@@ -194,32 +194,49 @@ function arbSymp()
     }
     return symp;
 }  
+// for(var i=0;i<100;i++)
+// {
+    
+//     var nameIndex=getRandomArbitrary(0,names.length-1);
+//     var dobIndex=getRandomArbitrary(0,dob.length-1);
+//     var cityIndex=getRandomArbitrary(0,cities.length-1);
+//     var genderIndex=getRandomArbitrary(0,gender.length-1);
+//     var pincodeIndex=getRandomArbitrary(0,pincodes.length-1);
+//     var stateIndex=getRandomArbitrary(0,states.length-1);
+//     var arbMedicine=arbMed();
+//     var arbSymptoms=arbSymp();
+//     var tbstatus=getRandomArbitrary(0,3);
+//     var symptomCount=getRandomArbitrary(0,10);
+//     var user={"aadhar":aadhar[aadharIndex],"name":names[nameIndex],"dob":dob[dobIndex],"city":cities[cityIndex],"gender":gender[genderIndex],"address":"Allahabad","pincode":pincodes[pincodeIndex],"state":states[stateIndex],"symptoms":arbSymptoms,"medicine":arbMedicine,"date":Date.now(),"tbstatus":tbstatus,"symptomCount":symptomCount}
+//     aadharIndex=aadharIndex+1;
+//     $.ajax({
+//         method:"POST",
+//         url:"https://tbhack2.herokuapp.com/api/user",
+//         data:user
+//     }).done(function(data){
+//         console.log(data);
+        
+//     }).fail(function(err){
+//         console.log(err);
+//     })
+//     console.log(user);
+// }
 for(var i=0;i<100;i++)
 {
-    
-    var nameIndex=getRandomArbitrary(0,names.length-1);
-    var dobIndex=getRandomArbitrary(0,dob.length-1);
+    var initialCount=getRandomArbitrary(10,100);
+    var finalCount  =getRandomArbitrary(10,50);
     var cityIndex=getRandomArbitrary(0,cities.length-1);
-    var genderIndex=getRandomArbitrary(0,gender.length-1);
-    var pincodeIndex=getRandomArbitrary(0,pincodes.length-1);
     var stateIndex=getRandomArbitrary(0,states.length-1);
-    var arbMedicine=arbMed();
-    var arbSymptoms=arbSymp();
-    var tbstatus=getRandomArbitrary(0,3);
-    var symptomCount=getRandomArbitrary(0,10);
-    var user={"aadhar":aadhar[aadharIndex],"name":names[nameIndex],"dob":dob[dobIndex],"city":cities[cityIndex],"gender":gender[genderIndex],"address":"Allahabad","pincode":pincodes[pincodeIndex],"state":states[stateIndex],"symptoms":arbSymptoms,"medicine":arbMedicine,"date":Date.now(),"tbstatus":tbstatus,"symptomCount":symptomCount}
-    aadharIndex=aadharIndex+1;
+    var data={"presentCount":initialCount,"finalCount":finalCount,"city":cities[cityIndex],"state":states[stateIndex]}
     $.ajax({
-        method:"POST",
-        url:"https://tbhack2.herokuapp.com/api/user",
-        data:user
-    }).done(function(data){
-        console.log(data);
-        
-    }).fail(function(err){
-        console.log(err);
-    })
-    console.log(user);
+                method:"POST",
+                url:"https://tbhack2.herokuapp.com/shop",
+                data:data
+            }).done(function(data){
+                console.log(data);
+                
+            }).fail(function(err){
+                console.log(err);
+            })
 }
-
 
