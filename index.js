@@ -24,7 +24,7 @@ app.use(express.static(__dirname+'/views'));
 app.use("/api/user",apiroutes);
 app.use("/api/doc",apiroutesDoc);
 app.use("/api/patient",patientroutes);
-app.use("/report",homeroutes);
+app.use("/",homeroutes);
 app.use("/log",logroutes);
 app.use("/report",logreportroutes);
 app.use("/shop",shoproutes)

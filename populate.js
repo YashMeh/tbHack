@@ -223,7 +223,7 @@ function arbSymp()
 // }
 for(var i=0;i<100;i++)
 {
-    var initialCount=getRandomArbitrary(10,100);
+    var initialCount=getRandomArbitrary(50,100);
     var finalCount  =getRandomArbitrary(10,50);
     var cityIndex=getRandomArbitrary(0,cities.length-1);
     var stateIndex=getRandomArbitrary(0,states.length-1);
