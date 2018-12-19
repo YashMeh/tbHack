@@ -3,8 +3,8 @@ var express=require("express"),
 	mongoose=require("mongoose"),
 	user=require("../models/logData.js")
 
-mongoose.connect("mongodb://Yash123:yash1234@ds039768.mlab.com:39768/tbhack");
-//mongoose.connect("mongodb://localhost/emailer");	
+mongoose.connect("mongodb://yash123:yash123@ds163699.mlab.com:63699/tbhack");
+	//mongoose.connect("mongodb://localhost/emailer");	
 
 router.get("/",function(req,res){                   //Find All=> find()  //Make a new one =>create(req.body)  //Find specific=> findById(req.params.id)
 	user.find()										//Updata any query=> findOneAndUpdata({_id:req.params.id},req.body,{new:true})
