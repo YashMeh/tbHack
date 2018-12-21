@@ -244,8 +244,21 @@ function drawGraphByState(){
 
 function drawGraphByGender(){
 	if(GenderChart){
-		GenderChart.clear();
+		GenderChart.data = {
+			labels: xLabel,
+			datasets: [{
+				label: 'Patient Count',
+				data: yLabel,
+				backgroundColor: ['rgba(33,147,176,0.6)','rgba(142,45,226,0.6)'],
+				borderWidth: 1,
+				borderColor: '#cccccc',
+				hoverBorderWidth: 2,
+				hoverBorderColor: '#000000'
+			}]
+		};
+		GenderChart.update();
 	}
+	else{
 
 	var myChart = document.getElementById("genderWiseGraph").getContext('2d');
 
@@ -279,11 +292,25 @@ function drawGraphByGender(){
 			}
 		});
 }
+}
 
 function drawGraphByAge(){
 	if(AgeChart){
-		AgeChart.clear();
+		AgeChart.data = {
+			labels: xLabel,
+			datasets: [{
+				label: 'Patient Count',
+				data: yLabel,
+				backgroundColor: 'rgba(33,147,176,0.6)',
+				borderWidth: 1,
+				borderColor: '#cccccc',
+				hoverBorderWidth: 2,
+				hoverBorderColor: '#000000'
+			}]
+		};
+		AgeChart.update();
 	}
+	else{
 	var myChart = document.getElementById("ageWiseGraph").getContext('2d');
 
 	//Global Options
@@ -327,4 +354,5 @@ function drawGraphByAge(){
 				}
 			}
 		});
+}
 }
