@@ -17,5 +17,4 @@ router.get("/business",function(req,res){
     res.sendFile("medwise.html",{root:__dirname+'/../views'});
 })
 
-
 module.exports=router    
