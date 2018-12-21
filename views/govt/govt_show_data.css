@@ -32,4 +32,6 @@ h1{
 	text-align: center;
 }
 
-
+.data:nth-of-type(odd){
+	background-color: rgba(85,147,168,0.3);
+}
