@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Sahayak IP Portal</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="userstyle.css">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
     <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
@@ -20,90 +20,9 @@
         });
     </script>
 
-
-
-    <!-- Compiled and minified JavaScript -->
-
-
 </head>
 <body>
-<!-- <div class="container" align="center">
-<div class="preview-container">
-    <video id="preview"></video>
-    <h1 id="unscanned">Please scan Aadhar Card.</h1>
-    <h1 id="scanned">Aadhar Card scanned!</h1>
-</div>
-<h2 id="content"></h2>
-<table align="center">
-    <tr>
-        <td>Aadhar Number:</td>
-        <td><input type="text" id="aadhar"></td>
-    </tr>
-    <tr>
-        <td>Name:</td>
-        <td><input type="text" id="name" id="name"></td>
-    </tr>
-    <tr>
-        <td>Date Of Birth:</td>
-        <td><input type="text" id="dob"></td>
-    </tr>
-    <tr>
-        <td>Gender:</td>
-        <td><input type="text" id="gender"></td>
-    </tr>
-    <tr>
-        <td>Address:</td>
-        <td><textarea id="address"></textarea></td>
-    </tr>
-    <tr>
-        <td>City:</td>
-        <td><input type="text" id="city"></td>
-    </tr>
-    <tr>
-        <td>State:</td>
-        <td><input type="text" id="state"></td>
-    </tr>
-    <tr>
-        <td>Pincode:</td>
-        <td><input type="text" id="pincode"></td>
-    </tr>
-</table>
-<div class="formDiv">
-<form>
-    <b>Symptoms:</b>
-    <div id="symptoms">
-        <input type="checkbox" name="symptoms" value="Cough">Cough lasting for 3 weeks or longer<br>
-        <input type="checkbox" name="symptoms" value="ChestPain">Chest pain<br>
-        <input type="checkbox" name="symptoms" value="CoughingBlood">Coughing up blood or sputum<br>
-        <input type="checkbox" name="symptoms" value="Fatigue">Fatigue<br>
-        <input type="checkbox" name="symptoms" value="WeightLoss">Weight Loss<br>
-        <input type="checkbox" name="symptoms" value="NoAppetite">No Appetite<br>
-        <input type="checkbox" name="symptoms" value="Chills">Chills<br>
-        <input type="checkbox" name="symptoms" value="Fever">Fever<br>
-        <input type="checkbox" name="symptoms" value="NightSweating">Sweating at night<br>
-    </div>
-    <div id="medDiv">
-        <br><b>Medicines:</b>
-        <select id="medicine">
-            <option value="choose">-Choose medicine combination-</option>
-            <option value="1110">Isoniazid/Rifampin/Ethambutol</option>
-            <option value="0111">Rifampin/Ethambutol/Pyrazinamide</option>
-            <option value="1011">Isoniazid/Ethambutol/Pyrazinamide</option>
-            <option value="1101">Isoniazid/Rifampin/Pyrazinamide</option>
-        </select>
-    </div>
-    <br>
-    <input type="button" value="Report" id="submit">
-</form>
-</div>
-</div>
-<div id="loading">
-    <h1>Submitting your data!</h1>
-    <img src="media/loading.gif" width="40%">
-</div>
-<div id="success">
-    <h1>Thank you for reporting!</h1>
-</div> -->
+
 
 <div class="container s12 m5 l4">
     <div class="cont1" style="display:block">
@@ -284,23 +203,6 @@
                         </div>
                     </td>
                 </tr>
-                <!--<tr>-->
-                <!--<td>-->
-                <!--<div class="row">-->
-                <!--<div class="input-field">-->
-                <!--<select id="medicine">-->
-                <!--<option value="choose" disabled selected></option>-->
-                <!--<option value="1110">Isoniazid/Rifampin/Ethambutol</option>-->
-                <!--<option value="0111">Rifampin/Ethambutol/Pyrazinamide</option>-->
-                <!--<option value="1011">Isoniazid/Ethambutol/Pyrazinamide</option>-->
-                <!--<option value="1101">Isoniazid/Rifampin/Pyrazinamide</option>-->
-                <!--</select>-->
-                <!--<label style="font-size:1.5em">Select the medicene</label>-->
-                <!--</div> -->
-                <!--</div>-->
-                <!--</td>-->
-                <!--</tr>-->
-
                 <tr>
                     <td>
                         <div class="row">
@@ -312,28 +214,12 @@
                     </td>
                 </tr>
 
-                <!-- <div class="row">
-                        <div class="input-field col s12 center">
-                                <input type="button" value="Report" id="submit" class="waves-effect waves-light btn-large next">Report</a>
-                        </div>
-                </div> -->
-
             </table>
-            <!-- <div class="input-field">
-                <select id="medicene">
-                    <option value="choose" disabled selected>Choose the medicene combination</option>
-                    <option value="1110">Isoniazid/Rifampin/Ethambutol</option>
-                    <option value="0111">Rifampin/Ethambutol/Pyrazinamide</option>
-                    <option value="1011">Isoniazid/Ethambutol/Pyrazinamide</option>
-                    <option value="1101">Isoniazid/Rifampin/Pyrazinamide</option>
-                </select>
-                <label style="font-size:1.5em">Select the medicene</label>
-            </div>  -->
         </form>
     </div>
     <div id="loading">
         <h1>Submitting your data!</h1>
-        <img src="media/loading.gif" width="40%">
+        <img src="/views/media/loading.gif" width="40%">
     </div>
     <div id="success">
         <h1>Thank you for reporting!</h1>
