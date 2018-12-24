@@ -71,7 +71,7 @@ function getData()  {
     $("#preview").hide();
     $("#loadingRec").show();
     let records=[];
-    const url = "http://tbhack2.herokuapp.com/report/"+aadhar;
+    const url = "https://tbhack2.herokuapp.com/report/"+aadhar;
     $.get(url,function(data)   {
         $("#displayOption").show();
         $("#loadingRec").hide();
