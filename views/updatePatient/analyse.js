@@ -1,6 +1,6 @@
 function analyse(target)    {
     return new Promise(function (resolve,reject) {
-        const url = "http://tbhack2.herokuapp.com/log";
+        const url = "https://tbhack2.herokuapp.com/log";
         let stateTally = {};
         let states = "Andhra Pradesh/Arunachal Pradesh/Assam/Bihar/Chhattisgarh/Goa/Gujarat/Haryana/Himachal Pradesh/Jammu and Kashmir/Jharkhand/Karnataka/Kerala/Madhya Pradesh/Maharashtra/Manipur/Meghalaya/Mizoram/Nagaland/Orissa/Punjab/Rajasthan/Sikkim/Tamil Nadu/Telangana/Tripura/Uttarakhand/Uttar Pradesh/West Bengal/Andaman and Nicobar Islands/Chandigarh/Dadra and Nagar Haveli/Daman and Diu/Delhi/Lakshadweep/Puducherry";
         states = states.split("/");

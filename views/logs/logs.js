@@ -1,4 +1,4 @@
-const url = "http://tbhack2.herokuapp.com/log";
+const url = "https://tbhack2.herokuapp.com/log";
 let medicineCombos = {
     "1110":"Isoniazid/Rifampin/Ethambutol",
     "0111":"Rifampin/Ethambutol/Pyrazinamide",
